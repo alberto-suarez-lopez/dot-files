@@ -4,6 +4,14 @@
 
 readonly OS="$(uname)"
 
+function setup-homebrew
+{
+    [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
+    which -s brew; [[ $? -eq ${OK} ]] || { homebrew/install-homebrew.sh; } && \
+        homebrew/install-formulae.sh homebrew/formulae-to-install
+    return $?
+}
+
 function setup-macports
 {
     [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
@@ -20,8 +28,12 @@ function setup-macports
 }
 
 pushd $(dirname ${BASH_SOURCE[0]}) >/dev/null 2>&1
+# Homebrew ____________________________________________________________________
+setup-homebrew
+exit
+# MacPorts ____________________________________________________________________
 { sudo bash -c "export OS="${OS}"; $(declare -f setup-macports); setup-macports"; 
-    [[ $? -eq ${OK} ]] || { exit ${ERROR}; }; } # setup-macports
+    [[ $? -eq ${OK} ]] || { exit ${ERROR}; }; }
 popd >/dev/null 2>&1
 exit ${OK}
 
