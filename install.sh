@@ -30,7 +30,6 @@ function setup-macports
 pushd $(dirname ${BASH_SOURCE[0]}) >/dev/null 2>&1
 # Homebrew ____________________________________________________________________
 setup-homebrew
-exit
 # MacPorts ____________________________________________________________________
 { sudo bash -c "export OS="${OS}"; $(declare -f setup-macports); setup-macports"; 
     [[ $? -eq ${OK} ]] || { exit ${ERROR}; }; }
