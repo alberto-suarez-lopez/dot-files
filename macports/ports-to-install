@@ -1,0 +1,66 @@
+alacritty
+ansible-lint
+ansible_select
+autoconf
+automake
+bash
+bash-completion
+clang-10 +analyzer +libstdcxx
+clang_select
+coreutils
+curl +http2 +ssl
+curl-ca-bundle
+datamash
+ffmpeg +gpl3 +jack +nonfree +x11
+findutils
+freetype
+gawk
+getopt
+git +credential_osxkeychain +diff_highlight +doc +pcre
+git-extras
+git-flow
+git-flow-bash-completion
+gmake
+gnutls +doc
+graphviz +pangocairo +x11
+graphviz-gui
+grep
+gsed
+howdoi
+htop
+ImageMagick +graphviz +x11
+inetutils +client
+jpeg
+jq
+llvm-10
+llvm_select
+lua
+luarocks +curl +openssl
+MacVim +huge +lua +python27 +python38 +ruby
+md5sha1sum
+ncurses
+nodejs15
+npm6
+openssl
+pip_select
+py-ansible
+py27-ansible
+py27-pip
+py27-pygments
+py38-ansible
+py38-pip
+py38-pygments
+pygments_select
+python27
+python38
+python_select
+readline
+rsync
+ruby27 +doc
+ruby_select
+ssed
+tiff
+vim +huge +lua +python27 +python38 +ruby +x11
+webp
+wget +ssl
+xz
