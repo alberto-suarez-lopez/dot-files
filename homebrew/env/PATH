@@ -6,3 +6,4 @@ export BREW_HOME="/usr/local"
 # PATH ________________________________________________________________________
 [[ -z "${PATH}" ]] && { export PATH="${BREW_HOME}/bin:${BREW_HOME}/sbin"; } || \
     { export PATH="${BREW_HOME}/bin:${BREW_HOME}/sbin:${PATH}"; }
+export PATH="${HOME}/Scripts:${PATH}"

@@ -7,3 +7,4 @@ export MP_HOME="/opt/local"
 [[ -z "${PATH}" ]] && { export PATH="${MP_HOME}/bin:${MP_HOME}/sbin"; } || \
     { export PATH="${MP_HOME}/bin:${MP_HOME}/sbin:${PATH}"; }
 # export PATH="${MP_HOME}/libexec/gnubin:${PATH}"
+export PATH="${HOME}/Scripts:${PATH}"
