@@ -1,0 +1,8 @@
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
+
+# Homebrew HOME _______________________________________________________________
+export BREW_HOME="/usr/local"
+
+# MANPATH _____________________________________________________________________
+[[ -z "${MANPATH}" ]] && { export MANPATH="${BREW_HOME}/share/man"; } || \
+    { export MANPATH="${BREW_HOME}/share/man:${MANPATH}"; }
