@@ -1,0 +1,9 @@
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
+
+# MacPorts HOME _______________________________________________________________
+export MP_HOME="/opt/local"
+
+# EDITOR ______________________________________________________________________
+export EDITOR="${MP_HOME}/bin/vim"
+export VISUAL="${MP_HOME}/bin/mvim"
+export MP_EDITOR="${EDITOR}"

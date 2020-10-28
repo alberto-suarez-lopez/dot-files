@@ -1,0 +1,8 @@
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
+
+# MacPorts HOME _______________________________________________________________
+export MP_HOME="/opt/local"
+
+# MANPATH _____________________________________________________________________
+[[ -z "${MANPATH}" ]] && { export MANPATH="${MP_HOME}/share/man"; } || \
+    { export MANPATH="${MP_HOME}/share/man:${MANPATH}"; }

@@ -4,17 +4,8 @@
 
 readonly OS="$(uname)"
 
-function setup-homebrew
+function enable-build-from-source
 {
-    [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
-    which -s brew; [[ $? -eq ${OK} ]] || { homebrew/install-homebrew.sh; } && \
-        homebrew/install-formulae.sh homebrew/formulae-to-install
-    return $?
-}
-
-function setup-macports
-{
-    [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
     readonly MACPORTS_CONF="/opt/local/etc/macports/macports.conf"
     [[ -w ${MACPORTS_CONF} ]] || \
         { >&2 echo "Configuration file '${MACPORTS_CONF}' not found."; return ${ERROR}; }
@@ -23,16 +14,37 @@ function setup-macports
         [[ $? -eq ${OK} ]] && \
             { sed -i 's/^\(#\)\?buildfromsource\([[:space:]]\+\)\(ifneeded\|always\|never\)$/buildfromsource\2always/' ${MACPORTS_CONF}; } || \
             { echo -e "buildfromsource     \talways" >>${MACPORTS_CONF}; }; }
-    macports/install-ports.sh macports/ports-to-install
+    return ${OK}
+}
+
+function install-ports
+{
+    files/install-ports.sh files/ports-to-install
+    return $?
+}
+
+function create_symlinks
+{
+    [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
+    for script in install-ports upgrade-ports;
+    do 
+        ln -f -s ${PWD}/files/${script} ${HOME}/Scripts/${script};
+        ln -f -s ${PWD}/files/${script}.sh ${HOME}/Scripts/${script}.sh;
+    done
+    return ${OK}
+}
+
+function setup-macports
+{
+    [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
+    { sudo bash -c "$(declare -f enable-build-from-source); enable-build-from-source"; } && \
+        { sudo bash -c "$(declare -f install-ports); install-ports"; } && \
+        create_symlinks
     return $?
 }
 
 pushd $(dirname ${BASH_SOURCE[0]}) >/dev/null 2>&1
-# Homebrew ____________________________________________________________________
-setup-homebrew
-# MacPorts ____________________________________________________________________
-{ sudo bash -c "export OS="${OS}"; $(declare -f setup-macports); setup-macports"; 
-    [[ $? -eq ${OK} ]] || { exit ${ERROR}; }; }
+setup-macports
 popd >/dev/null 2>&1
 exit ${OK}
 
