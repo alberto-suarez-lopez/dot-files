@@ -1,0 +1,23 @@
+# dot-files HOME ______________________________________________________________
+export DOT_FILES_HOME="${HOME}/bin/dot-files"
+
+# PATH ________________________________________________________________________
+for path_definition in $(find ${DOT_FILES_HOME} -name "PATH");
+do
+    [[ -r ${path_definition} ]] && { source ${path_definition}; };
+done
+export PATH="${HOME}/bin:${PATH}"
+
+# MANPATH _____________________________________________________________________
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] && { 
+    for entry in $(cat /private/etc/manpaths /private/etc/manpaths.d/*);
+    do 
+        [[ -z "${MANPATH}" ]] && \
+            { export MANPATH="${entry}"; } || \
+            { export MANPATH="${entry}:${MANPATH}"; };
+    done;
+}; }
+for manpath_definition in $(find ${DOT_FILES_HOME} -name "MANPATH");
+do
+    [[ -r ${manpath_definition} ]] && { source ${manpath_definition}; };
+done

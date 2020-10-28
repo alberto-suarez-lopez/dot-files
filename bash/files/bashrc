@@ -1,0 +1,26 @@
+# Aliases _____________________________________________________________________
+[[ -r ${BASH_ALIASES} ]] && { source ${HOME}/.aliases; 
+    export BASH_ALIASES="${HOME}/.aliases"; 
+    export BASH_ENV="${BASH_ALIASES}"; 
+}
+for aliases_definition in $(find ${DOT_FILES_HOME} -name "ALIASES");
+do
+    [[ -r ${aliases_definition} ]] && { source ${aliases_definition}; };
+done
+
+# Constants ___________________________________________________________________
+[[ -r ${PWD}/.constants ]] && { source ${PWD}/.constants; }
+for constants_definition in $(find ${DOT_FILES_HOME} -name "CONSTANTS");
+do
+    [[ -r ${constants_definition} ]] && { source ${constants_definition}; };
+done
+
+# Functions ___________________________________________________________________
+[[ -r ${PWD}/.functions ]] && { source ${PWD}/.functions; }
+for functions_definition in $(find ${DOT_FILES_HOME} -name "FUNCTIONS");
+do
+    [[ -r ${functions_definition} ]] && { source ${functions_definition}; };
+done
+
+# Prompt ______________________________________________________________________
+[[ -r ${PWD}/.prompt ]] && { source ${PWD}/.prompt; }
