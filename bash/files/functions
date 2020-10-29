@@ -1,0 +1,8 @@
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
+
+function upgrade
+{
+    upgrade-formulae && \
+        sudo upgrade-ports
+    return $?
+}
