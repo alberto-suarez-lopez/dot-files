@@ -1,5 +1,5 @@
 { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
 
 shopt -s expand_aliases
-alias head='/opt/local/bin/ghead'
-alias sed='/opt/local/bin/gsed'
+alias head='ghead'
+alias sed='gsed'
