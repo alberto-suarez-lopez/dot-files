@@ -6,5 +6,5 @@ export MP_HOME="/opt/local"
 # PATH ________________________________________________________________________
 [[ -z "${PATH}" ]] && { export PATH="${MP_HOME}/bin:${MP_HOME}/sbin"; } || \
     { export PATH="${MP_HOME}/bin:${MP_HOME}/sbin:${PATH}"; }
-# export PATH="${MP_HOME}/libexec/gnubin:${PATH}"
+export PATH="${MP_HOME}/libexec/gnubin:${PATH}" # coreutils
 export PATH="${HOME}/Scripts:${PATH}"
