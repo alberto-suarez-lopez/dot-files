@@ -1,0 +1,3 @@
+# Bash Git Prompt _____________________________________________________________
+GIT_PROMPT_ONLY_IN_REPO=0
+# GIT_PROMPT_LEADING_SPACE=0
