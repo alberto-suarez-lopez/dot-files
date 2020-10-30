@@ -5,5 +5,8 @@ export HISTFILESIZE=
 # cURL ________________________________________________________________________
 export CURL_CA_BUNDLE=${HOME}/.curl/ca-bundle.crt
 
+# Locale ______________________________________________________________________
+export LC_ALL=C
+
 # Misc ________________________________________________________________________
 export WHOAMI="$(curl https://api.ipify.org 2>/dev/null)"
