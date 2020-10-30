@@ -11,7 +11,8 @@ function save-current-settings
     [[ -d ${BACKUP_DIR} ]] || { mkdir -p ${BACKUP_DIR}; }
     for dot_file in ${DOT_FILES_TO_BACKUP};
     do 
-        cp ${HOME}/${dot_file} ${BACKUP_DIR};
+        [[ -f ${HOME}/${dot_file} ]] && \
+            { cp ${HOME}/${dot_file} ${BACKUP_DIR}; };
     done
     return ${OK}
 }

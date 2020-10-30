@@ -1,5 +1,5 @@
 # Aliases _____________________________________________________________________
-[[ -r ${BASH_ALIASES} ]] && { source ${HOME}/.aliases; 
+[[ -r ${HOME}/.aliases ]] && { source ${HOME}/.aliases; 
     export BASH_ALIASES="${HOME}/.aliases"; 
     export BASH_ENV="${BASH_ALIASES}"; 
 }
