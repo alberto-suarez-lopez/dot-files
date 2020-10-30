@@ -1,5 +1,5 @@
 # Bash Git Prompt HOME ________________________________________________________
-export BGP_HOME="${HOME}/bin/bash-git-prompt"
+BGP_HOME="${HOME}/bin/bash-git-prompt"
 
 # Bash Git Prompt _____________________________________________________________
 [[ -r ${BGP_HOME}/gitprompt.sh ]] && { source ${BGP_HOME}/gitprompt.sh; }
