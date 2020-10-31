@@ -1,4 +1,4 @@
- { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
 
 # Homebrew HOME _______________________________________________________________
 export BREW_HOME="/usr/local"
