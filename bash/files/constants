@@ -1,6 +1,9 @@
 # BASH history ________________________________________________________________
-export HISTSIZE=
-export HISTFILESIZE=
+export HISTSIZE=500000
+export HISTFILESIZE=1000000
+export HISTTIMEFORMAT="$(echo -e '\033[1;30m[%F %T]\033[0;39m ')"
+export HISTCONTROL="ignoreboth:erasedups"
+export HISTIGNORE="&:ls:[bf]g:exit:pwd:clear:history:[  ]*"
 
 # cURL ________________________________________________________________________
 export CURL_CA_BUNDLE=${HOME}/.curl/ca-bundle.crt

@@ -23,4 +23,4 @@ function __prompt_command
     return
 }
 
-PROMPT_COMMAND="setLastCommandState;__prompt_command;setGitPrompt"
+PROMPT_COMMAND="setLastCommandState;__prompt_command;setGitPrompt;history -a"
