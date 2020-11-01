@@ -8,7 +8,7 @@
 function clone_repository
 {
     [[ -d ${Z_HOME} ]] && \
-        { pushd ${Z_HOME} >/dev/null; git pull; popd >/dev/null; } || \
+        { pushd ${Z_HOME}; git pull; popd; } >/dev/null || \
         { git clone ${Z_REPOSITORY} ${Z_HOME}; }
     return $?
 }

@@ -8,7 +8,7 @@
 function clone_repository
 {
     [[ -d ${BGP_HOME} ]] && \
-        { pushd ${BGP_HOME} >/dev/null; git pull; popd >/dev/null; } || \
+        { pushd ${BGP_HOME}; git pull; popd; } >/dev/null || \
         { git clone ${BGP_REPOSITORY} ${BGP_HOME}; }
     return $?
 }
