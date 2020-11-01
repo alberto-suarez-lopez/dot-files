@@ -1,3 +1,17 @@
+[[ ! $(shopt -oq posix) ]] && { 
+    [[ -f /usr/share/bash-completion/bash_completion ]] && { 
+        source /usr/share/bash-completion/bash_completion;
+    } || { [[ -f /etc/bash_completion ]] && { 
+        source /etc/bash_completion;
+    }; }; complete -cf sudo; }
+
+# shopt -s autocd
+# shopt -s dirspell
+shopt -s cdspell
+
+shopt -s histappend
+shopt -s cmdhist
+
 { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
 
 function upgrade
