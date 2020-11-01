@@ -6,7 +6,9 @@ pushd $(dirname ${BASH_SOURCE[0]}) >/dev/null 2>&1
 export DOT_FILES_HOME="${PWD}"
 for item in $(ls -d */ | tr -s ' ' | sed 's|\(.*\)/|\1|');
 do 
-    [[ -x ${item}/setup.sh ]] && { ${item}/setup.sh; };
+    [[ -x ${item}/setup.sh ]] && { 
+        ${item}/setup.sh; [[ $? -eq ${OK} ]] || { exit ${ERROR}; };
+    };
 done
 popd >/dev/null 2>&1
 exit ${OK}
