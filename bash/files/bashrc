@@ -1,3 +1,5 @@
+[[ ! -z ${PS1} ]] || { return; } # if not running interactively, don't do anything
+
 # Aliases _____________________________________________________________________
 [[ -r ${HOME}/.aliases ]] && { source ${HOME}/.aliases; 
     export BASH_ALIASES="${HOME}/.aliases"; 
