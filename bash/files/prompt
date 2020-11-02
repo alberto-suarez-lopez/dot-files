@@ -18,7 +18,7 @@ function __prompt_command
     files="\$(count=\$(ls -1 | wc -l); [[ \${count} -eq 1 ]] && { echo \"\${count} file\"; } || { echo \"\${count} files\"; })"
     stats="${Dark_Gray}$(echo "(${files}, ${size})")"
     jobs="${Dark_Gray}$(echo "(\$(count=\$(jobs | wc -l); [[ \${count} -eq 1 ]] && { echo \"\${count} job\"; } || { echo \"\${count} jobs\"; }))")"
-    GIT_PROMPT_START="${title}${begin}${user}${at}${host} ${load} ${time}${end} ${Default}\w ${stats}\n_LAST_COMMAND_INDICATOR_ ${jobs}${Default}"
+    GIT_PROMPT_START="${title}\n${begin}${user}${at}${host} ${load} ${time}${end} ${Default}\w ${stats}\n_LAST_COMMAND_INDICATOR_ ${jobs}${Default}"
     GIT_PROMPT_END=" \$ "
     return
 }
