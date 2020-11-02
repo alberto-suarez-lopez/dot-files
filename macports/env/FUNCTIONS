@@ -4,4 +4,11 @@
 export MP_HOME="/opt/local"
 
 # BASH completion _____________________________________________________________
-[[ -r ${MP_HOME}/etc/profile.d/bash_completion.sh ]] && { source ${MP_HOME}/etc/profile.d/bash_completion.sh; }
+{ [[ -r ${MP_HOME}/etc/profile.d/bash_completion.sh ]] && { 
+    source ${MP_HOME}/etc/profile.d/bash_completion.sh;
+}; for completion in ${MP_HOME}/etc/bash_completion.d/*;
+do 
+    [[ -r ${completion} ]] && { source ${completion}; };
+done; }
+[[ -r ${MP_HOME}/share/git/contrib/completion/git-completion.bash ]] && \
+    { source ${MP_HOME}/share/git/contrib/completion/git-completion.bash; }

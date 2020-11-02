@@ -1,0 +1,12 @@
+{ OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
+
+# Homebrew HOME _______________________________________________________________
+export BREW_HOME="/usr/local"
+
+# BASH completion _____________________________________________________________
+{ [[ -r ${BREW_HOME}/etc/profile.d/bash_completion.sh ]] && { 
+    source ${BREW_HOME}/etc/profile.d/bash_completion.sh;
+}; for completion in ${BREW_HOME}/etc/bash_completion.d/*;
+do 
+    [[ -r ${completion} ]] && { source ${completion}; };
+done; }
