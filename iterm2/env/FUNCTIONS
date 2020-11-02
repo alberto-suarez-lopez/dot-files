@@ -1,0 +1,5 @@
+# iTerm2 FILES ________________________________________________________________
+ITERM2_FILES="${DOT_FILES_HOME}/iterm2/files"
+
+# Bash Git Prompt _____________________________________________________________
+[[ -r ${ITERM2_FILES}/iterm2_shell_integration.bash ]] && { source ${ITERM2_FILES}/iterm2_shell_integration.bash; }
