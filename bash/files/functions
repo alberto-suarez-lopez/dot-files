@@ -16,7 +16,8 @@ shopt -s cmdhist
 
 function upgrade
 {
-    upgrade-formulae && \
+    upgrade-casks && \
+        upgrade-formulae && \
         sudo upgrade-ports
     return $?
 }

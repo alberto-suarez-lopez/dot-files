@@ -10,6 +10,12 @@ function install-homebrew
     return ${OK}
 }
 
+function install-casks
+{
+    files/install-casks.sh files/casks-to-install
+    return $?
+}
+
 function install-formulae
 {
     files/install-formulae.sh files/formulae-to-install
@@ -19,7 +25,7 @@ function install-formulae
 function create_symlinks
 {
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
-    for script in install-formulae upgrade-formulae;
+    for script in install-casks install-formulae upgrade-casks upgrade-formulae;
     do 
         ln -f -s ${PWD}/files/${script} ${HOME}/Scripts/${script};
         ln -f -s ${PWD}/files/${script}.sh ${HOME}/Scripts/${script}.sh;
@@ -31,6 +37,7 @@ function setup-homebrew
 {
     [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
     install-homebrew && \
+        install-casks && \
         install-formulae && \
         create_symlinks
     return $?
