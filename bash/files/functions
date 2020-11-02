@@ -3,7 +3,9 @@
         source /usr/share/bash-completion/bash_completion;
     } || { [[ -f /etc/bash_completion ]] && { 
         source /etc/bash_completion;
-    }; }; complete -cf sudo; }
+    }; };
+}
+complete -cf sudo
 
 # shopt -s autocd
 # shopt -s dirspell

@@ -4,7 +4,4 @@
 export MP_HOME="/opt/local"
 
 # BASH completion _____________________________________________________________
-[[ -r ${MP_HOME}/etc/profile.d/bash_completion.sh ]] && { 
-    source ${MP_HOME}/etc/profile.d/bash_completion.sh;
-    complete -cf sudo;
-}
+[[ -r ${MP_HOME}/etc/profile.d/bash_completion.sh ]] && { source ${MP_HOME}/etc/profile.d/bash_completion.sh; }
