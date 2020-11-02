@@ -5,6 +5,7 @@ autoconf
 automake
 bash
 bash-completion
+bat
 clang-10 +analyzer +libstdcxx
 clang_select
 coreutils
@@ -43,6 +44,7 @@ nodejs15
 npm6
 openssl
 pip_select
+pstree
 py-ansible
 py27-ansible
 py27-pip
