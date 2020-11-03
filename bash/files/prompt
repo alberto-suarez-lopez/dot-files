@@ -1,24 +1,21 @@
 # Prompt ______________________________________________________________________
 function __prompt_command
 {
-    { Cyan="\[\033[0;36m\]"; 
-        Bold_Cyan="\[\033[1;36m\]"; 
-        Dark_Gray="\[\033[1;30m\]"; 
-        White="\[\033[1;37m\]"; 
-        Default="\[\033[0;39m\]"; } # colors
+    [[ -r ${HOME}/.colors ]] && { source ${HOME}/.colors; }
     title="\033]0;\$(pwd)\007"
-    begin="${Cyan}["
-    user="${Bold_Cyan}\u"
-    at="${Bold_Cyan}@"
-    host="${Bold_Cyan}\h"
+    begin="${Light_Blue}["
+    user="${Light_Green}\u"
+    at="${Light_Green}@"
+    host="${Light_Green}\h"
     load="${Dark_Gray}\$(uptime | awk '{ min = NF - 2; }END{ print \$min }' | tr -d ',')"
     time="${White}\$(date +'%H:%M')"
-    end="${Cyan}]"
+    end="${Light_Blue}]"
+    working_directory="${Light_Blue}\w"
     size="\$(ls -lah | grep '^total' | awk '{ print \$2 }')"
     files="\$(count=\$(ls -1 | wc -l); [[ \${count} -eq 1 ]] && { echo \"\${count} file\"; } || { echo \"\${count} files\"; })"
     stats="${Dark_Gray}$(echo "(${files}, ${size})")"
     jobs="${Dark_Gray}$(echo "(\$(count=\$(jobs | wc -l); [[ \${count} -eq 1 ]] && { echo \"\${count} job\"; } || { echo \"\${count} jobs\"; }))")"
-    GIT_PROMPT_START="${title}\n${begin}${user}${at}${host} ${load} ${time}${end} ${Default}\w ${stats}\n_LAST_COMMAND_INDICATOR_ ${jobs}${Default}"
+    GIT_PROMPT_START="${title}\n${begin}${user}${at}${host} ${load} ${time}${end} ${working_directory} ${stats}\n_LAST_COMMAND_INDICATOR_ ${jobs}${Default}"
     GIT_PROMPT_END=" \$ "
     return
 }

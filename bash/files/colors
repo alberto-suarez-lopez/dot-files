@@ -1,0 +1,60 @@
+# BASH colors _________________________________________________________________
+
+# Set _________________________________________________________________________
+Bold="\[\033[1m\]"
+Dim="\[\033[2m\]"
+Underlined="\[\033[4m\]"
+Blink="\[\033[5m\]"
+Reversed="\[\033[7m\]"
+Hidden="\[\033[8m\]"
+
+# Reset _______________________________________________________________________
+Reset="\[\033[0m\]"
+Reset_Bold="\[\033[21m\]"
+Reset_Dim="\[\033[22m\]"
+Reset_Underlined="\[\033[24m\]"
+Reset_Blink="\[\033[25m\]"
+Reset_Reversed="\[\033[27m\]"
+Reset_Hidden="\[\033[28m\]"
+
+# Foreground __________________________________________________________________
+Default="\[\033[39m\]"
+
+Black="\[\033[0;30m\]"
+Red="\[\033[0;31m\]"
+Green="\[\033[0;32m\]"
+Brown="\[\033[0;33m\]"
+Blue="\[\033[0;34m\]"
+Purple="\[\033[0;35m\]"
+Cyan="\[\033[0;36m\]"
+Light_Gray="\[\033[0;37m\]"
+
+Dark_Gray="\[\033[1;30m\]"
+Light_Red="\[\033[1;31m\]"
+Light_Green="\[\033[1;32m\]"
+Yellow="\[\033[1;33m\]"
+Light_Blue="\[\033[1;34m\]"
+Light_Purple="\[\033[1;35m\]"
+Light_Cyan="\[\033[1;36m\]"
+White="\[\033[1;37m\]"
+
+# Background __________________________________________________________________
+Default_Background="\[\033[49m\]"
+
+Black_Background="\[\033[0;40m\]"
+Red_Background="\[\033[0;41m\]"
+Green_Background="\[\033[0;42m\]"
+Brown_Background="\[\033[0;43m\]"
+Blue_Background="\[\033[0;44m\]"
+Purple_Background="\[\033[0;45m\]"
+Cyan_Background="\[\033[0;46m\]"
+Light_Gray_Background="\[\033[0;47m\]"
+
+Dark_Gray_Background="\[\033[1;40m\]"
+Light_Red_Background="\[\033[1;41m\]"
+Light_Green_Background="\[\033[1;42m\]"
+Yellow_Background="\[\033[1;43m\]"
+Light_Blue_Background="\[\033[1;44m\]"
+Light_Purple_Background="\[\033[1;45m\]"
+Light_Cyan_Background="\[\033[1;46m\]"
+White_Background="\[\033[1;47m\]"
