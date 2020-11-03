@@ -3,4 +3,4 @@
 shopt -s expand_aliases
 # alias head='ghead'
 # alias sed='gsed'
-alias cat='bat'
+# alias cat='bat'
