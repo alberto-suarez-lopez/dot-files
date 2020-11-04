@@ -39,6 +39,7 @@ lua
 luarocks +curl +openssl
 MacVim +huge +lua +python27 +python38 +ruby
 md5sha1sum
+most
 ncurses
 nodejs15
 npm6
