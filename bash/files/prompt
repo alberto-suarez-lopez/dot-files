@@ -16,7 +16,7 @@ function __prompt_command
     stats="${Dark_Gray}$(echo "(${files}, ${size})")"
     jobs="${Dark_Gray}$(echo "(\$(count=\$(jobs | wc -l); [[ \${count} -eq 1 ]] && { echo \"\${count} job\"; } || { echo \"\${count} jobs\"; }))")"
     GIT_PROMPT_START="${title}\n${begin}${user}${at}${host} ${load} ${time}${end} ${working_directory} ${stats}\n_LAST_COMMAND_INDICATOR_ ${jobs}${Default}"
-    GIT_PROMPT_END=" \$ "
+    GIT_PROMPT_END=" \$ ${Reset}"
     return
 }
 
