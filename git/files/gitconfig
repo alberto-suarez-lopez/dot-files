@@ -1,0 +1,16 @@
+[user]
+    email = alberto.suarez.lopez@gmail.com
+    name = Alberto Suárez López
+
+[alias]
+    rank = shortlog --summary --numbered --no-merges
+    tree = log --graph --decorate --pretty=oneline --abbrev-commit
+
+[pull]
+    rebase = false
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    process = git-lfs filter-process
+    smudge = git-lfs smudge -- %f
+    required = true
