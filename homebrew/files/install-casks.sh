@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 { readonly OK=0; readonly ERROR=1; }
 

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 port selfupdate && \
     port upgrade outdated && \
     port clean --all installed && \

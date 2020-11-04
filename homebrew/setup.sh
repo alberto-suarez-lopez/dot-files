@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 { readonly OK=0; readonly ERROR=1; }
 
@@ -6,7 +6,7 @@ readonly OS="$(uname)"
 
 function install-homebrew
 {
-    which -s brew; [[ $? -eq ${OK} ]] || { files/install-homebrew.sh; return $?; }
+    type -p brew >/dev/null 2>&1; [[ $? -eq ${OK} ]] || { files/install-homebrew.sh; return $?; }
     return ${OK}
 }
 
