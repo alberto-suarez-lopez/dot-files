@@ -64,6 +64,7 @@ ssed
 tiff
 tmux
 tmux-mem-cpu-load
+vegeta
 vim +huge +lua +python27 +python38 +ruby +x11
 webp
 wget +ssl
