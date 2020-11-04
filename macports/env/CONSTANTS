@@ -7,3 +7,6 @@ export MP_HOME="/opt/local"
 export EDITOR="${MP_HOME}/bin/vim"
 export VISUAL="${MP_HOME}/bin/mvim"
 export MP_EDITOR="${EDITOR}"
+
+# MANPAGER ____________________________________________________________________
+export MANPAGER="${MP_HOME}/bin/most"
