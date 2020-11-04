@@ -4,6 +4,13 @@
 
 readonly OS="$(uname)"
 
+function check-if-installed
+{
+    type -p port >/dev/null 2>&1; [[ $? -eq ${OK} ]] && \
+        { return ${OK}; } || \
+        { return ${ERROR}; }
+}
+
 function enable-build-from-source
 {
     readonly MACPORTS_CONF="/opt/local/etc/macports/macports.conf"
@@ -37,7 +44,8 @@ function create_symlinks
 function setup-macports
 {
     [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
-    { sudo bash -c "$(declare -f enable-build-from-source); enable-build-from-source"; } && \
+    check-if-installed && \
+        { sudo bash -c "$(declare -f enable-build-from-source); enable-build-from-source"; } && \
         { sudo bash -c "$(declare -f install-ports); install-ports"; } && \
         create_symlinks
     return $?
