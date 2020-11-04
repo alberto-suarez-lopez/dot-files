@@ -1,5 +1,5 @@
 shopt -s expand_aliases
-{ which -s dircolors; [[ $? -eq 0 && -x $(which dircolors) ]] && { 
+{ type -p dircolors >/dev/null 2>&1; [[ $? -eq 0 && -x $(type -p dircolors) ]] && { 
     [[ -r ${HOME}/.dircolors ]] && \
         { eval "$(dircolors -b ${HOME}/.dircolors)"; } || \
         { eval "$(dircolors -b)"; };
@@ -12,3 +12,4 @@ shopt -s expand_aliases
     alias egrep='egrep --color=auto';
     alias fgrep='fgrep --color=auto';
 }; }
+alias ll='ls -l'
