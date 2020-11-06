@@ -7,4 +7,5 @@
 * [iTerm2](http://www.iterm2.com/)
 * [MacPorts](http://www.macports.org/)
 * [nord-dircolors](http://github.com/arcticicestudio/nord-dircolors)
+* [Vagrant](http://www.vagrantup.com/)
 * [z](http://github.com/rupa/z)
