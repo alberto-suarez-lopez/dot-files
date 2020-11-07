@@ -22,13 +22,13 @@ function create-symlinks
     for dot_file in $(ls -1 files/);
     do 
         source="${HOME}/.${dot_file}";
-        backup="${BACKUP_DIR}/.${dot_file}"
+        backup="${BACKUP_DIR}/.${dot_file}";
         [[ -f ${source} && -f ${backup} ]] && { 
             { diff ${source} ${backup} >/dev/null 2>&1; [[ $? -eq ${OK} ]] && { 
-                rm ${HOME}/.${dot_file};
+                rm ${source};
             }; };
-        }
-        ln -f -s ${PWD}/files/${dot_file} ${HOME}/.${dot_file};
+        };
+        ln -f -s ${PWD}/files/${dot_file} ${source};
     done
     return ${OK}
 }

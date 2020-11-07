@@ -17,7 +17,7 @@ function enable-build-from-source
     [[ -w ${MACPORTS_CONF} ]] || \
         { >&2 echo "Configuration file '${MACPORTS_CONF}' not found."; return ${ERROR}; }
     cp ${MACPORTS_CONF} ${MACPORTS_CONF}.factory-defaults
-    { cat ${MACPORTS_CONF} | grep -E '^(#)?buildfromsource' >/dev/null 2>&1;
+    { cat ${MACPORTS_CONF} | grep -E '^(#)?buildfromsource' >/dev/null 2>&1; 
         [[ $? -eq ${OK} ]] && \
             { sed -i 's/^\(#\)\?buildfromsource\([[:space:]]\+\)\(ifneeded\|always\|never\)$/buildfromsource\2always/' ${MACPORTS_CONF}; } || \
             { echo -e "buildfromsource     \talways" >>${MACPORTS_CONF}; }; }

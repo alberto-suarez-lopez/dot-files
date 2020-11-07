@@ -31,14 +31,14 @@ function save-current-settings
 
 function create-symlinks
 {
-    source="${HOME}/.dircolors";
+    source="${HOME}/.dircolors"
     backup="${BACKUP_DIR}/.dircolors"
     [[ -f ${source} && -f ${backup} ]] && { 
         { diff ${source} ${backup} >/dev/null 2>&1; [[ $? -eq ${OK} ]] && { 
-            rm ${HOME}/.dircolors;
+            rm ${source};
         }; };
     }
-    ln -f -s ${NORD_DIRCOLORS} ${HOME}/.dircolors;
+    ln -f -s ${NORD_DIRCOLORS} ${source}
     return ${OK}
 }
 
