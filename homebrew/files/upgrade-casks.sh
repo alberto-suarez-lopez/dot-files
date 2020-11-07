@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 brew update && \
-    brew cask upgrade && \
+    brew upgrade --cask && \
     brew cleanup
 exit $?
 
