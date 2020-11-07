@@ -62,6 +62,7 @@ rsync
 ruby27 +doc
 ruby_select
 ssed
+sshfs
 tiff
 tmux
 tmux-mem-cpu-load
