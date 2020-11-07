@@ -5,7 +5,7 @@
 { readonly BGP_HOME="${HOME}/bin/bash-git-prompt"; 
     readonly BGP_REPOSITORY="https://github.com/magicmonty/bash-git-prompt.git"; }
 
-function clone_repository
+function clone-repository
 {
     [[ -d ${BGP_HOME} ]] && \
         { pushd ${BGP_HOME}; git pull; popd; } >/dev/null || \
@@ -15,7 +15,7 @@ function clone_repository
 
 function setup-bash-git-prompt
 {
-    clone_repository
+    clone-repository
     return $?
 }
 

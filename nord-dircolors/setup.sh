@@ -10,7 +10,7 @@
     readonly BACKUP_DIR="${BACKUP_HOME}/$(date +'%Y-%m-%d')"; 
     readonly DOT_FILES_TO_BACKUP=".dircolors"; }
 
-function clone_repository
+function clone-repository
 {
     [[ -d ${NORD_HOME} ]] && \
         { pushd ${NORD_HOME}; git pull; popd; } >/dev/null || \
@@ -29,7 +29,7 @@ function save-current-settings
     return ${OK}
 }
 
-function create_symlinks
+function create-symlinks
 {
     source="${HOME}/.dircolors";
     backup="${BACKUP_DIR}/.dircolors"
@@ -44,9 +44,9 @@ function create_symlinks
 
 function setup-nord-dircolors
 {
-    clone_repository && \
+    clone-repository && \
         save-current-settings && \
-        create_symlinks
+        create-symlinks
     return $?
 }
 

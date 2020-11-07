@@ -17,7 +17,7 @@ function save-current-settings
     return ${OK}
 }
 
-function create_symlinks
+function create-symlinks
 {
     for dot_file in $(ls -1 files/);
     do 
@@ -36,7 +36,7 @@ function create_symlinks
 function setup-bash
 {
     save-current-settings && \
-        create_symlinks
+        create-symlinks
     return $?
 }
 

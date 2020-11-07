@@ -22,7 +22,7 @@ function install-formulae
     return $?
 }
 
-function create_symlinks
+function create-symlinks
 {
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
     for script in install-casks install-formulae upgrade-casks upgrade-formulae;
@@ -39,7 +39,7 @@ function setup-homebrew
     install-homebrew && \
         install-casks && \
         install-formulae && \
-        create_symlinks
+        create-symlinks
     return $?
 }
 

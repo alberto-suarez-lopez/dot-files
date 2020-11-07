@@ -5,7 +5,7 @@
 { readonly Z_HOME="${HOME}/bin/z"; 
     readonly Z_REPOSITORY="https://github.com/rupa/z.git"; }
 
-function clone_repository
+function clone-repository
 {
     [[ -d ${Z_HOME} ]] && \
         { pushd ${Z_HOME}; git pull; popd; } >/dev/null || \
@@ -21,7 +21,7 @@ function assign-permissions
 
 function setup-z
 {
-    clone_repository && \
+    clone-repository && \
         assign-permissions
     return $?
 }

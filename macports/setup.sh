@@ -30,7 +30,7 @@ function install-ports
     return $?
 }
 
-function create_symlinks
+function create-symlinks
 {
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
     for script in install-ports upgrade-ports;
@@ -47,7 +47,7 @@ function setup-macports
     check-if-installed && \
         { sudo bash -c "$(declare -f enable-build-from-source); enable-build-from-source"; } && \
         { sudo bash -c "$(declare -f install-ports); install-ports"; } && \
-        create_symlinks
+        create-symlinks
     return $?
 }
 
