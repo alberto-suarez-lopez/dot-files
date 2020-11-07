@@ -1,0 +1,19 @@
+{
+    "bootstrapped": true,
+    "in_process_packages": [
+    ],
+    "installed_packages": [
+        "A File Icon",
+        "ayu",
+        "BracketHighlighter",
+        "Git",
+        "GitGutter",
+        "Material Theme",
+        "Nord",
+        "Package Control",
+        "Pretty JSON",
+        "SideBarEnhancements",
+        "SublimeCodeIntel",
+        "Vagrant"
+    ]
+}
