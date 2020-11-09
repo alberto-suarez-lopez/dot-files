@@ -17,7 +17,7 @@ function usage
 [[ -r ${file} ]] || { usage; exit ${ERROR}; }
 while read formula;
 do
-    brew install ${formula};
+    brew install --build-from-source ${formula};
 done < <(cat ${file})
 [[ "${1:--}" == "-" ]] && { rm "${file}"; }
 exit ${OK}
