@@ -10,7 +10,7 @@ export PATH="${HOME}/bin:${PATH}"
 
 # MANPATH _____________________________________________________________________
 { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] && { 
-    for entry in $(cat /private/etc/manpaths /private/etc/manpaths.d/*);
+    for entry in $(cat /private/etc/manpaths /private/etc/manpaths.d/* 2>/dev/null);
     do 
         [[ -z "${MANPATH}" ]] && \
             { export MANPATH="${entry}"; } || \
