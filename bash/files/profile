@@ -1,8 +1,9 @@
 # dot-files HOME ______________________________________________________________
 export DOT_FILES_HOME="${HOME}/bin/dot-files"
+export DOT_FILES_ENV_PATTERN="${DOT_FILES_HOME}/*/env"
 
 # PATH ________________________________________________________________________
-for path_definition in $(find ${DOT_FILES_HOME} -name "PATH");
+for path_definition in $(find ${DOT_FILES_ENV_PATTERN} -name "PATH");
 do
     [[ -r ${path_definition} ]] && { source ${path_definition}; };
 done
@@ -17,7 +18,7 @@ export PATH="${HOME}/bin:${PATH}"
             { export MANPATH="${entry}:${MANPATH}"; };
     done;
 }; }
-for manpath_definition in $(find ${DOT_FILES_HOME} -name "MANPATH");
+for manpath_definition in $(find ${DOT_FILES_ENV_PATTERN} -name "MANPATH");
 do
     [[ -r ${manpath_definition} ]] && { source ${manpath_definition}; };
 done

@@ -14,6 +14,18 @@ shopt -s cdspell
 shopt -s histappend
 shopt -s cmdhist
 
+function generate-random-password
+{
+    echo "$(date +'%s'; uname -a; ps -e; uptime)" | sha256sum | base64 | head -c 16
+    return $?
+}
+
+function md5
+{
+    echo $* | openssl md5 -binary | openssl base64 | tr +/ -_ | tr -d =
+    return $?
+}
+
 { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
 
 function upgrade
