@@ -2,6 +2,10 @@
 
 { readonly OK=0; readonly ERROR=1; }
 
+readonly OS="$(uname)"
+
+{ readonly GIT_HOME="${HOME}/Git"; }
+
 { readonly BACKUP_HOME="${HOME}/.backup"; 
     readonly BACKUP_DIR="${BACKUP_HOME}/$(date +'%Y-%m-%d')"; 
     readonly DOT_FILES_TO_BACKUP=".gitconfig"; }
@@ -11,6 +15,14 @@ function check-if-installed
     type -p git >/dev/null 2>&1; [[ $? -eq ${OK} ]] && \
         { return ${OK}; } || \
         { return ${ERROR}; }
+}
+
+function create-git-directory-if-not-present
+{
+    [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
+    [[ -d ${GIT_HOME} ]] || \
+        { mkdir -p ${GIT_HOME}; return $?; }
+    return ${OK}
 }
 
 function save-current-settings
@@ -43,6 +55,7 @@ function create-symlinks
 function setup-git
 {
     check-if-installed && \
+        create-git-directory-if-not-present && \
         save-current-settings && \
         create-symlinks
     return $?
