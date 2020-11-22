@@ -20,7 +20,7 @@ function create-vms-directory-if-not-present
     return ${OK}
 }
 
-function create-symlinks
+function create-symlinks-for-scripts
 {
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
     for script in destroy-vm halt-vm up-vm;
@@ -36,7 +36,7 @@ function setup-vagrant
     [[ "${OS}" == "Darwin" ]] || { return ${OK}; }
     check-if-installed && \
         create-vms-directory-if-not-present && \
-        create-symlinks
+        create-symlinks-for-scripts
     return $?
 }
 
