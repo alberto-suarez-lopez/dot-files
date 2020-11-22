@@ -40,6 +40,8 @@ luarocks +curl +openssl
 MacVim +huge +lua +python27 +python38 +ruby
 md5sha1sum
 most
+mysql8
+mysql_select
 ncurses
 nodejs15
 npm6
