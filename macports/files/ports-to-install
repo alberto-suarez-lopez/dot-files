@@ -29,6 +29,7 @@ grep
 gsed
 howdoi
 htop
+httpie +python38
 ImageMagick +graphviz +x11
 inetutils +client
 jpeg
