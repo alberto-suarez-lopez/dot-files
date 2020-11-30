@@ -1,0 +1,83 @@
+" Plugins ____________________________________________________________________
+call plug#begin(expand('~/.vim/plugged'))
+Plug 'airblade/vim-gitgutter'
+Plug 'arcticicestudio/nord-vim'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'yuttie/comfortable-motion.vim'
+call plug#end()
+
+" Initial setup ______________________________________________________________
+set backspace=indent,eol,start
+set encoding=utf-8
+let mapleader = ' '
+set mouse=a
+set ruler
+set scrolloff=3
+set updatetime=100
+set visualbell
+
+" Gutter _____________________________________________________________________
+set number
+set foldcolumn=4
+let g:gitgutter_max_signs = -1
+let g:gitgutter_map_keys = 0
+
+" Statusline _________________________________________________________________
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+
+" Indentation ________________________________________________________________
+set autoindent
+set copyindent
+set smartindent
+
+" Tabulation _________________________________________________________________
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+" White spaces _______________________________________________________________
+set wrap
+set list
+set listchars=space:·,tab:──,trail:~,extends:»,precedes:»
+map <Leader>l :set list!<CR>
+
+" Color & highlighting _______________________________________________________
+syntax on
+set t_Co=256
+set background=dark
+colorscheme nord
+" set colorcolumn=80
+set cursorline
+set cursorcolumn
+
+" Searching __________________________________________________________________
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+set showmatch
+map <Leader><space> :let @/=''<CR>
+
+set helplang=es
+set noshowmode
+
+" noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
+" noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+
+let g:comfortable_motion_friction = 80.0
+let g:comfortable_motion_air_drag = 2.0
+
+
+
+" Bracket Highlighter
+" Git
+" Git gutter
+" Package Control
+" Pretty JSON
+" Side bar
+" Vagrant
+" Sublime Code Intel
+
