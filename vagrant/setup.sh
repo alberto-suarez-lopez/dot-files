@@ -25,8 +25,8 @@ function create-symlinks-for-scripts
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
     for script in destroy-vm halt-vm up-vm;
     do 
-        ln -f -s ${PWD}/files/${script} ${HOME}/Scripts/${script};
-        ln -f -s ${PWD}/files/${script}.sh ${HOME}/Scripts/${script}.sh;
+        ln -f -s ${PWD}/bin/${script} ${HOME}/Scripts/${script};
+        ln -f -s ${PWD}/bin/${script}.sh ${HOME}/Scripts/${script}.sh;
     done
     return ${OK}
 }
