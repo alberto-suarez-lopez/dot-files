@@ -13,7 +13,7 @@ function check-if-installed
 
 function specify-preferences-directory
 {
-    defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${PWD}/files" && \
+    defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "${PWD}/etc" && \
         defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
     return $?
 }
