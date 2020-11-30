@@ -26,7 +26,7 @@ function enable-build-from-source
 
 function install-ports
 {
-    files/install-ports.sh files/ports-to-install
+    bin/install-ports.sh etc/ports-to-install
     return $?
 }
 
@@ -35,8 +35,8 @@ function create-symlinks-for-scripts
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
     for script in install-ports upgrade-ports;
     do 
-        ln -f -s ${PWD}/files/${script} ${HOME}/Scripts/${script};
-        ln -f -s ${PWD}/files/${script}.sh ${HOME}/Scripts/${script}.sh;
+        ln -f -s ${PWD}/bin/${script} ${HOME}/Scripts/${script};
+        ln -f -s ${PWD}/bin/${script}.sh ${HOME}/Scripts/${script}.sh;
     done
     return ${OK}
 }
