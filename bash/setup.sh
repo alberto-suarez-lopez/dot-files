@@ -19,7 +19,7 @@ function save-current-settings
 
 function create-symlinks
 {
-    for dot_file in $(ls -1 files/);
+    for dot_file in $(ls -1 etc/);
     do 
         source="${HOME}/.${dot_file}";
         backup="${BACKUP_DIR}/.${dot_file}";
@@ -28,7 +28,7 @@ function create-symlinks
                 rm ${source};
             }; };
         };
-        ln -f -s ${PWD}/files/${dot_file} ${source};
+        ln -f -s ${PWD}/etc/${dot_file} ${source};
     done
     return ${OK}
 }
