@@ -6,19 +6,19 @@ readonly OS="$(uname)"
 
 function install-homebrew
 {
-    type -p brew >/dev/null 2>&1; [[ $? -eq ${OK} ]] || { files/install-homebrew.sh; return $?; }
+    type -p brew >/dev/null 2>&1; [[ $? -eq ${OK} ]] || { bin/install-homebrew.sh; return $?; }
     return ${OK}
 }
 
 function install-casks
 {
-    files/install-casks.sh files/casks-to-install
+    bin/install-casks.sh etc/casks-to-install
     return $?
 }
 
 function install-formulae
 {
-    files/install-formulae.sh files/formulae-to-install
+    bin/install-formulae.sh etc/formulae-to-install
     return $?
 }
 
@@ -27,8 +27,8 @@ function create-symlinks-for-scripts
     [[ -d ${HOME}/Scripts ]] || { mkdir -p ${HOME}/Scripts; }
     for script in install-casks install-formulae upgrade-casks upgrade-formulae;
     do 
-        ln -f -s ${PWD}/files/${script} ${HOME}/Scripts/${script};
-        ln -f -s ${PWD}/files/${script}.sh ${HOME}/Scripts/${script}.sh;
+        ln -f -s ${PWD}/bin/${script} ${HOME}/Scripts/${script};
+        ln -f -s ${PWD}/bin/${script}.sh ${HOME}/Scripts/${script}.sh;
     done
     return ${OK}
 }
