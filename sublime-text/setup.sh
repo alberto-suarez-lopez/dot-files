@@ -35,7 +35,7 @@ function save-current-settings
 function create-symlinks
 {
     IFS=$'\n'
-    for preferences_file in $(ls -1 files/);
+    for preferences_file in $(ls -1 etc/);
     do 
         source="${ST_PREFERENCES_DIR}/${preferences_file}";
         backup="${BACKUP_DIR}/${preferences_file}";
@@ -44,7 +44,7 @@ function create-symlinks
                 rm ${source};
             }; };
         };
-        ln -f -s ${PWD}/files/${preferences_file} ${source};
+        ln -f -s ${PWD}/etc/${preferences_file} ${source};
     done
     return ${OK}
 }
