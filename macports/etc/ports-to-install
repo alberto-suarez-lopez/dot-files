@@ -1,3 +1,4 @@
+ag
 alacritty
 ansible-lint
 ansible_select
@@ -6,39 +7,58 @@ automake
 bash
 bash-completion
 bat
+bottom
+broot
+cheat
+choose
 clang-10 +analyzer +libstdcxx
 clang_select
 coreutils
 curl +http2 +ssl
 curl-ca-bundle
+curlie
 datamash
+delta
+dog
+duf
+dust
+exa +doc +git
+fd
 ffmpeg +gpl3 +jack +nonfree +x11
 findutils
 freetype
+fzf
 gawk
 getopt
 git +credential_osxkeychain +diff_highlight +doc +pcre
 git-extras
 git-flow
 git-flow-bash-completion
+glances +html_export
 gmake
 gnutls +doc
+google-cloud-sdk +bash_completion
+gping
 graphviz +pangocairo +x11
 graphviz-gui
 grep
 gsed
+gtop
 howdoi
 htop
 httpie +python38
+hyperfine
 ImageMagick +graphviz +x11
 inetutils +client
 jpeg
 jq
 llvm-10
 llvm_select
+lsd
 lua
 luarocks +curl +openssl
 MacVim +huge +lua +python27 +python38 +ruby
+mcfly
 md5sha1sum
 most
 mysql8
@@ -48,6 +68,7 @@ nodejs15
 npm6
 openssl
 pip_select
+procs
 pstree
 py-ansible
 py27-ansible
@@ -61,15 +82,20 @@ python27
 python38
 python_select
 readline
+ripgrep +pcre
 rsync
 ruby27 +doc
 ruby_select
+sd
 ssed
 tiff
+tldr
 tmux
 tmux-mem-cpu-load
 vegeta
 vim +huge +lua +python27 +python38 +ruby +x11
 webp
 wget +ssl
+xh
+zoxide
 xz
