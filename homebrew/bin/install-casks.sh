@@ -17,7 +17,7 @@ function usage
 [[ -r ${file} ]] || { usage; exit ${ERROR}; }
 while read cask;
 do
-    brew cask install ${cask};
+    brew install --cask ${cask};
 done < <(cat ${file})
 [[ "${1:--}" == "-" ]] && { rm "${file}"; }
 exit ${OK}
