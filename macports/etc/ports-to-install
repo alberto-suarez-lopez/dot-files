@@ -13,6 +13,7 @@ cheat
 choose
 clang-10 +analyzer +libstdcxx
 clang_select
+colordiff
 coreutils
 curl +http2 +ssl
 curl-ca-bundle
@@ -52,6 +53,7 @@ ImageMagick +graphviz +x11
 inetutils +client
 jpeg
 jq
+lftp
 llvm-10
 llvm_select
 lsd
@@ -81,6 +83,7 @@ pygments_select
 python27
 python38
 python_select
+qpdf
 readline
 ripgrep +pcre
 rsync
