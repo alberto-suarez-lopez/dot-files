@@ -1,5 +1,6 @@
 ag
 alacritty
+ansible
 ansible-lint
 ansible_select
 autoconf
@@ -25,19 +26,19 @@ duf
 dust
 exa +doc +git
 fd
-ffmpeg +gpl3 +jack +nonfree +x11
+ffmpeg +gpl3 +jack +librtmp +nonfree +x11
 findutils
 freetype
 fzf
 gawk
 getopt
-git +credential_osxkeychain +diff_highlight +doc +pcre
+git +credential_osxkeychain +diff_highlight +doc +pcre +python
 git-extras
 git-flow
 git-flow-bash-completion
 glances +html_export
 gmake
-gnutls +doc
+gnutls
 google-cloud-sdk +bash_completion
 gping
 graphviz +pangocairo +x11
@@ -47,7 +48,7 @@ gsed
 gtop
 howdoi
 htop
-httpie +python38
+httpie +python310
 hyperfine
 ImageMagick +graphviz +x11
 inetutils +client
@@ -58,8 +59,8 @@ llvm-10
 llvm_select
 lsd
 lua
-luarocks +curl +openssl
-MacVim +huge +lua +python27 +python38 +ruby
+lua-rocks
+MacVim +huge +lua +python27 +python39 +ruby30
 mcfly
 md5sha1sum
 most
@@ -73,21 +74,17 @@ pip_select
 procs
 pstree
 py-ansible
-py27-ansible
-py27-pip
-py27-pygments
-py38-ansible
-py38-pip
-py38-pygments
+py-pip
+py-pygments
 pygments_select
 python27
-python38
+python310
 python_select
-qpdf
+qpdf +openssl
 readline
 ripgrep +pcre
 rsync
-ruby27 +doc
+ruby30 +doc
 ruby_select
 sd
 ssed
@@ -96,7 +93,7 @@ tldr
 tmux
 tmux-mem-cpu-load
 vegeta
-vim +huge +lua +python27 +python38 +ruby +x11
+vim +huge +lua +python27 +python39 +ruby30 +x11
 webp
 wget +ssl
 xh
