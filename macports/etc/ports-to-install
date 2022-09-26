@@ -63,8 +63,6 @@ MacVim +huge +lua +python27 +python39 +ruby30
 mcfly
 md5sha1sum
 most
-mysql8
-mysql_select
 ncurses
 nodejs15
 npm6
