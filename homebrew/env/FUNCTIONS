@@ -1,7 +1,7 @@
 { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
 
 # Homebrew HOME _______________________________________________________________
-export BREW_HOME="/usr/local"
+export BREW_HOME="/opt/homebrew"
 
 # BASH completion _____________________________________________________________
 { [[ -r ${BREW_HOME}/etc/profile.d/bash_completion.sh ]] && { 
