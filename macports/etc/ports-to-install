@@ -11,7 +11,7 @@ bottom
 broot
 cheat
 choose
-clang-10 +analyzer +libstdcxx
+clang-14 +analyzer +libstdcxx
 clang_select
 colordiff
 coreutils
@@ -20,6 +20,8 @@ curl-ca-bundle
 curlie
 datamash
 delta
+docker
+docker-compose
 dog
 duf
 dust
@@ -30,7 +32,6 @@ findutils
 freetype
 fzf
 gawk
-getopt
 git +credential_osxkeychain +diff_highlight +doc +pcre +python
 git-extras
 git-flow
@@ -38,6 +39,7 @@ git-flow-bash-completion
 glances +html_export
 gmake
 gnutls
+go
 google-cloud-sdk +bash_completion
 gping
 graphviz +pangocairo +x11
@@ -54,17 +56,18 @@ inetutils +client
 jpeg
 jq
 lftp
-llvm-10
+llvm-14
 llvm_select
 lsd
 lua
-lua-rocks
-MacVim +huge +lua +python27 +python39 +ruby30
+lua-luarocks
+MacVim +huge +lua +python39 +ruby30
+mc +ncurses +sftp
 mcfly
 md5sha1sum
 most
 ncurses
-nodejs15
+nodejs16
 npm6
 openssl
 pip_select
@@ -85,12 +88,18 @@ ruby30 +doc
 ruby_select
 sd
 ssed
+terraform-1.3
+terraform_select
 tiff
 tldr
 tmux
 tmux-mem-cpu-load
+transmission
+util-linux
 vegeta
-vim +huge +lua +python27 +python39 +ruby30 +x11
+vim +huge +lua +python39 +ruby30 +x11
+vlc
+youtube-dl +ffmpeg +python310
 webp
 wget +ssl
 xh
