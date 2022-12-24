@@ -1,7 +1,8 @@
 { OS="$(uname)"; [[ "${OS}" == "Darwin" ]] || { return; }; }
 
 # Homebrew HOME _______________________________________________________________
-export BREW_HOME="/opt/homebrew"
+[[ "$(uname -m)" == "arm64" ]] && { export BREW_HOME="/opt/homebrew"; } || \
+    { export BREW_HOME="/usr/local"; }
 
 # MANPATH _____________________________________________________________________
 [[ -z "${MANPATH}" ]] && { export MANPATH="${BREW_HOME}/share/man"; } || \
