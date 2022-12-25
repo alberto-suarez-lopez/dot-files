@@ -75,8 +75,10 @@ pip_select
 procs
 pstree
 py-ansible
+py-fire
 py-pip
 py-pygments
+py-requests
 pygments_select
 python27
 python310
