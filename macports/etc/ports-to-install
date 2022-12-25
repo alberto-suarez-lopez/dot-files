@@ -79,6 +79,7 @@ py-pygments
 pygments_select
 python27
 python310
+python311
 python_select
 qpdf +openssl
 readline
@@ -99,7 +100,7 @@ util-linux
 vegeta
 vim +huge +lua +python39 +ruby30 +x11
 vlc
-youtube-dl +ffmpeg +python310
+youtube-dl +ffmpeg +python311
 webp
 wget +ssl
 xh
