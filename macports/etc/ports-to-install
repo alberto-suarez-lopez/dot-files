@@ -13,6 +13,7 @@ cheat
 choose
 clang-14 +analyzer +libstdcxx
 clang_select
+cmake +docs +python311
 colordiff
 coreutils
 curl +http2 +ssl
