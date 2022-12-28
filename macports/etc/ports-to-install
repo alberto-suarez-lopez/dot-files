@@ -68,8 +68,8 @@ mcfly
 md5sha1sum
 most
 ncurses
-nodejs16
-npm6
+nodejs19
+npm9
 openssl
 pip_select
 procs
