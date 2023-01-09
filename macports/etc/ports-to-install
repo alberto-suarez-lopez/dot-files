@@ -28,7 +28,7 @@ duf
 dust
 exa +doc +git
 fd
-ffmpeg +gpl3 +jack +librtmp +nonfree +x11
+ffmpeg +gpl3 +jack +nonfree +x11
 findutils
 freetype
 fzf
