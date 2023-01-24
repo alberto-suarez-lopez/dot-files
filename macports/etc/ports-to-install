@@ -7,8 +7,10 @@ automake
 bash
 bash-completion
 bat
+bitwarden-cli
 bottom
 broot
+cadaver
 cheat
 choose
 clang-14 +analyzer +libstdcxx
@@ -56,6 +58,7 @@ ImageMagick +graphviz +x11
 inetutils +client
 jpeg
 jq
+kitty
 lftp
 llvm-14
 llvm_select
