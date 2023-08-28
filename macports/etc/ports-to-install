@@ -32,6 +32,7 @@ exa +doc +git
 fd
 ffmpeg +gpl3 +jack +nonfree +x11
 findutils
+fish
 freetype
 fzf
 gawk
@@ -39,6 +40,7 @@ git +credential_osxkeychain +diff_highlight +doc +pcre +python
 git-extras
 git-flow
 git-flow-bash-completion
+gitui
 glances +html_export
 gmake
 gnutls
@@ -70,9 +72,12 @@ mc +ncurses +sftp
 mcfly
 md5sha1sum
 most
+mtr
 ncurses
+nmap +pcre +ssl
 nodejs19
 npm9
+ntop
 openssl
 pip_select
 procs
@@ -95,7 +100,7 @@ ruby30 +doc
 ruby_select
 sd
 ssed
-terraform-1.3
+terraform-1.5
 terraform_select
 tiff
 tldr
@@ -107,9 +112,11 @@ vegeta
 vim +huge +lua +python39 +ruby30 +x11
 vlc
 youtube-dl +ffmpeg +python311
+watch
 webp
 wget +ssl
 xh
-zoxide
 xz
 yq
+zoxide
+zsh
