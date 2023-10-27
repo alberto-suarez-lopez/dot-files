@@ -54,7 +54,7 @@ gsed
 gtop
 howdoi
 htop
-httpie +python310
+httpie +python311
 hyperfine
 ImageMagick +graphviz +x11
 inetutils +client
@@ -67,7 +67,7 @@ llvm_select
 lsd
 lua
 lua-luarocks
-MacVim +huge +lua +python39 +ruby30
+MacVim +huge +lua +python311 +ruby30
 mc +ncurses +sftp
 mcfly
 md5sha1sum
@@ -83,6 +83,8 @@ pip_select
 procs
 pstree
 py-ansible
+py-awscli
+py-awscli-plugin-endpoint
 py-fire
 py-pip
 py-pygments
@@ -109,7 +111,7 @@ tmux-mem-cpu-load
 transmission
 util-linux
 vegeta
-vim +huge +lua +python39 +ruby30 +x11
+vim +huge +lua +python311 +ruby30 +x11
 vlc
 youtube-dl +ffmpeg +python311
 watch
