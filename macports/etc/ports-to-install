@@ -7,13 +7,15 @@ automake
 bash
 bash-completion
 bat
+bat-extras
 bitwarden-cli
 bottom
 broot
 cadaver
+cargo
 cheat
 choose
-clang-14 +analyzer +libstdcxx
+clang-17 +analyzer +libstdcxx
 clang_select
 cmake +docs +python311
 colordiff
@@ -28,9 +30,10 @@ docker-compose
 dog
 duf
 dust
-exa +doc +git
+eza +doc +git
 fd
-ffmpeg +gpl3 +jack +nonfree +x11
+ffmpeg +gpl3 +jack +nonfree +rav1e +x11
+ffmpeg6 +gpl3 +jack +nonfree +rav1e +x11
 findutils
 fish
 freetype
@@ -62,7 +65,7 @@ jpeg
 jq
 kitty
 lftp
-llvm-14
+llvm-17
 llvm_select
 lsd
 lua
@@ -75,8 +78,8 @@ most
 mtr
 ncurses
 nmap +pcre +ssl
-nodejs19
-npm9
+nodejs21
+npm10
 ntop
 openssl
 pip_select
@@ -93,6 +96,7 @@ pygments_select
 python27
 python310
 python311
+python312
 python_select
 qpdf +openssl
 readline
@@ -100,10 +104,13 @@ ripgrep +pcre
 rsync
 ruby30 +doc
 ruby_select
+rust
 sd
 ssed
+tcptraceroute
 terraform-1.5
 terraform_select
+testssl
 tiff
 tldr
 tmux
