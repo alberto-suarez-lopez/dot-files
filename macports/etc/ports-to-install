@@ -28,6 +28,7 @@ delta
 docker
 docker-compose
 dog
+dos2unix
 duf
 dust
 eza +doc +git
