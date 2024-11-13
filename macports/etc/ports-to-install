@@ -11,11 +11,13 @@ bat-extras
 bitwarden-cli
 bottom
 broot
-cadaver
+#cadaver
 cargo
 cheat
 choose
-clang-17 +analyzer +libstdcxx
+clang-14 +analyzer +libstdcxx
+clang-15 +analyzer +libstdcxx
+clang-19 +analyzer +libstdcxx
 clang_select
 cmake +docs +python311
 colordiff
@@ -34,12 +36,14 @@ dust
 eza +doc +git
 fd
 ffmpeg +gpl3 +jack +nonfree +rav1e +x11
-ffmpeg6 +gpl3 +jack +nonfree +rav1e +x11
+ffmpeg7 +gpl3 +jack +nonfree +rav1e +x11
 findutils
 fish
 freetype
 fzf
 gawk
+gcc14
+gcc_select
 git +credential_osxkeychain +diff_highlight +doc +pcre +python
 git-extras
 git-flow
@@ -50,7 +54,7 @@ gmake
 gnutls
 go
 google-cloud-sdk +bash_completion
-gping
+#gping
 graphviz +pangocairo +x11
 graphviz-gui
 grep
@@ -58,7 +62,7 @@ gsed
 gtop
 howdoi
 htop
-httpie +python311
+httpie +python312
 hyperfine
 ImageMagick +graphviz +x11
 inetutils +client
@@ -66,7 +70,9 @@ jpeg
 jq
 kitty
 lftp
-llvm-17
+llvm-14
+llvm-15
+llvm-19
 llvm_select
 lsd
 lua
@@ -79,11 +85,12 @@ most
 mtr
 ncurses
 nmap +pcre +ssl
-nodejs21
+nodejs22
 npm10
-ntop
+#ntop
 openssl
 pip_select
+pigz
 procs
 pstree
 py-ansible
@@ -103,13 +110,13 @@ qpdf +openssl
 readline
 ripgrep +pcre
 rsync
-ruby30 +doc
+ruby31 +doc
 ruby_select
 rust
 sd
 ssed
 tcptraceroute
-terraform-1.5
+terraform-1.9
 terraform_select
 testssl
 tiff
@@ -121,7 +128,7 @@ util-linux
 vegeta
 vim +huge +lua +python311 +ruby30 +x11
 vlc
-youtube-dl +ffmpeg +python311
+youtube-dl +ffmpeg +python312
 watch
 webp
 wget +ssl
