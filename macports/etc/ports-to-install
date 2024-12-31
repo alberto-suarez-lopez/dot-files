@@ -68,6 +68,7 @@ ImageMagick +graphviz +x11
 inetutils +client
 jpeg
 jq
+just
 kitty
 lftp
 llvm-14
