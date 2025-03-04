@@ -79,7 +79,7 @@ llvm_select
 lsd
 lua
 lua-luarocks
-MacVim +huge +lua +python311 +ruby30
+MacVim +huge +lua +python313 +ruby33
 mc +ncurses +sftp
 mcfly
 md5sha1sum
@@ -108,6 +108,7 @@ python27
 python310
 python311
 python312
+python313
 python_select
 qpdf +openssl
 readline
@@ -129,9 +130,9 @@ tmux-mem-cpu-load
 transmission
 util-linux
 vegeta
-vim +huge +lua +python311 +ruby30 +x11
+vim +huge +lua +python313 +ruby33 +x11
 vlc
-youtube-dl +ffmpeg +python312
+youtube-dl +ffmpeg +python313
 watch
 webp
 wget +ssl
