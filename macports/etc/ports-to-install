@@ -114,7 +114,7 @@ qpdf +openssl
 readline
 ripgrep +pcre
 rsync
-ruby31 +doc
+ruby33 +doc
 ruby_select
 rust
 sd
