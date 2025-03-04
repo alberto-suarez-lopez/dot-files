@@ -1,7 +1,7 @@
 ag
 alacritty
-ansible-lint
-ansible_select
+#ansible-lint
+#ansible_select
 autoconf
 automake
 bash
@@ -44,6 +44,7 @@ fzf
 gawk
 gcc14
 gcc_select
+ghc
 git +credential_osxkeychain +diff_highlight +doc +pcre +python
 git-extras
 git-flow
@@ -85,6 +86,7 @@ md5sha1sum
 most
 mtr
 ncurses
+neovim
 nmap +pcre +ssl
 nodejs22
 npm10
@@ -94,7 +96,7 @@ pip_select
 pigz
 procs
 pstree
-py-ansible
+#py-ansible
 py-awscli
 py-awscli-plugin-endpoint
 py-fire
