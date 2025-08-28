@@ -1,7 +1,7 @@
 ag
 alacritty
-#ansible-lint
-#ansible_select
+ansible-lint
+ansible_select
 autoconf
 automake
 bash
@@ -16,9 +16,8 @@ broot
 cargo
 cheat
 choose
-clang-14 +analyzer +libstdcxx
-clang-15 +analyzer +libstdcxx
 clang-19 +analyzer +libstdcxx
+clang-20 +analyzer +libstdcxx
 clang_select
 cmake +docs +python311
 colordiff
@@ -73,13 +72,12 @@ jq
 just
 kitty
 lftp
-llvm-14
-llvm-15
 llvm-19
+llvm-20
 llvm_select
 lsd
-lua
-lua-luarocks
+lua54
+lua54-luarocks
 MacVim +huge +lua +python313 +ruby33
 mc +ncurses +sftp
 mcfly
@@ -90,14 +88,17 @@ ncurses
 neovim
 nmap +pcre +ssl
 nodejs22
+nodejs24
 npm10
+npm11
 #ntop
+nushell
 openssl
 pip_select
 pigz
 procs
 pstree
-#py-ansible
+py-ansible
 py-awscli
 py-awscli-plugin-endpoint
 py-fire
@@ -121,7 +122,7 @@ rust
 sd
 ssed
 tcptraceroute
-terraform-1.9
+terraform-1.12
 terraform_select
 testssl
 tiff
