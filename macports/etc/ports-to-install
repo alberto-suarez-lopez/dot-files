@@ -16,8 +16,8 @@ broot
 cargo
 cheat
 choose
-clang-19 +analyzer +libstdcxx
-clang-20 +analyzer +libstdcxx
+clang-19 +analyzer
+clang-21 +analyzer
 clang_select
 cmake +docs +python311
 colordiff
@@ -73,7 +73,7 @@ just
 kitty
 lftp
 llvm-19
-llvm-20
+llvm-21
 llvm_select
 lsd
 lua54
