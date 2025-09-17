@@ -122,7 +122,7 @@ rust
 sd
 ssed
 tcptraceroute
-terraform-1.12
+terraform-1.13
 terraform_select
 testssl
 tiff
