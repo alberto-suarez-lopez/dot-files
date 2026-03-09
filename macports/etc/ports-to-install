@@ -16,12 +16,14 @@ broot
 cargo
 cheat
 choose
+clang-18 +analyzer
 clang-19 +analyzer
 clang-21 +analyzer
 clang_select
 cmake +docs +python311
 colordiff
 coreutils
+ctop
 curl +http2 +ssl
 curl-ca-bundle
 curlie
@@ -37,6 +39,7 @@ eza +doc +git
 fd
 ffmpeg +gpl3 +jack +nonfree +rav1e +x11
 ffmpeg7 +gpl3 +jack +nonfree +rav1e +x11
+ffmpeg8 +gpl3 +jack +nonfree +rav1e +x11
 findutils
 fish
 freetype
@@ -72,6 +75,7 @@ jq
 just
 kitty
 lftp
+llvm-18
 llvm-19
 llvm-21
 llvm_select
@@ -82,6 +86,7 @@ MacVim +huge +lua +python313 +ruby33
 mc +ncurses +sftp
 mcfly
 md5sha1sum
+moreutils +doc
 most
 mtr
 ncurses
@@ -131,6 +136,7 @@ tmux
 tmux-mem-cpu-load
 transmission
 util-linux
+uv
 vegeta
 vim +huge +lua +python313 +ruby33 +x11
 vlc
