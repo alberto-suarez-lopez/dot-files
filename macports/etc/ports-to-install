@@ -55,10 +55,12 @@ git-flow-bash-completion
 gitui
 glances +html_export
 gmake
+gnupg2 +pinetry_mac
 gnutls
 go
 google-cloud-sdk +bash_completion
-#gping
+gping
+gpgme
 graphviz +pangocairo +x11
 graphviz-gui
 grep
@@ -102,6 +104,7 @@ opencode
 openssl
 pip_select
 pigz
+pinentry-mac
 procs
 pstree
 py-ansible
